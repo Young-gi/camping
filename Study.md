@@ -66,7 +66,15 @@ e.g. (length =500, nullable = false, columnDefinition = "TEXT")
 
 - postsRepository.findAll() : 테이블 posts에 있는 모든 데이터 조회해 옴
 
+- @MappedSuperclass : JPA Entity 클래스들이 해당 클래스를 상속할 경우 해당 클래스의 필드들도 칼럼으로 인식함.
 
+- @EntityListeners(AuditingEntityListener.class) : 해당 클래스에 Auditing 기능을 포함함.
+
+- @CreatedDate : Entity가 생성되어 저장될 때 시간이 자동으로 저장됨.
+
+- @LsatModifiedDate : 조회한 Entity의 값을 변경시 시간이 자동 저장됨.
+
+- @EnableJpaAuditing : @SpringBootApplication에 추가하여, JPA Auditing 활성화
 
 
 
@@ -113,4 +121,7 @@ e.g. ```public void cleanup(){ postsRepository.deleteAll(); }```
 = restTemplate.exchange(url, HttpMethod.PUT, requestEntity, Long.class);
 ```
 - - restTemplate.exchange : HTTP 메소드로 요청받은 내용 requestEntity을 수행(업데이트)
+
+- getForObject("/", String.class) : 주어진 URL 주소로 HTTP GET 메서드로 객체로 결과를 반환받음.
+
 

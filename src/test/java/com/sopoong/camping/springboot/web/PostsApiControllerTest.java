@@ -37,7 +37,7 @@ public class PostsApiControllerTest {
 
     @After
     public void tearDown() throws Exception {
-        // Test 종료 후 다른 테스트와 메모리 침범 방지를 위한 clear 작업
+        // Test 종료 후 다른 테스트와 메모리 침범 방지를 위한 clear 작업. teardown: 분해/파괴
         postsRepository.deleteAll();
     }
 

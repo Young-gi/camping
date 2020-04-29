@@ -4,4 +4,4 @@
 .gradle
 .idea
 
-application-real-oauth.properties
+/src/main/resources/application-real-oauth.properties

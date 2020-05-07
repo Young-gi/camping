@@ -1,5 +1,6 @@
 package com.sopoong.camping.springboot.config.auth;
 
+import com.sopoong.camping.springboot.domain.user.Role;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
